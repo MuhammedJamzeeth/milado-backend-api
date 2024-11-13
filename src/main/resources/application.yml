@@ -1,0 +1,67 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: milado-api
+  datasource:
+    url: jdbc:mysql://localhost:3306/milado-api
+    username: root
+    password: jamzee
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+
+com:
+  milado:
+    token:
+      access-token:
+        private-key: "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAorJbT8cISxIJ
+                          5P8ukiHebeOv4F9uMausFBMoDQWfXI1gwoU4p3X0T7hkz/eJpweH+/LoYG/Jb9mx
+                          dkt1ttxDQ0WhZz9v3MoKvWvc+tsvrXCj7CMgHtPevehL8Qy8KzIi0PpgkgLGxnoq
+                          VcW870cFT4n9gSRziCX/VBYxgoZbL2ueDNbQq4RCZdRajCyCBFjELVgW8fXk3gmn
+                          +jolB81NEPQz+OfyyGcEs88w5rjP7dryM5ZNl5eGyllRxXSBV3U9bypwKi+J0c6m
+                          vBcH9NZ6/MEodho2mdMeG6zqkPgxhAuqH0SCuCkTv2X0x27aRFRM2aT0hiWhdjQS
+                          GIh/k70JAgMBAAECggEASKSR8dEx0zTMBqMuf9dnokN6WzaXhiyA+pFPcAkJF8GF
+                          Jvnz1xt/ZbQyawHp7STpuCQQxASp4yKky0E6z5c3lL3noigXSg3OuyIXbOvEgEQ9
+                          d/Nyg4hciWDAGvM5xDPd4jdAU+570Y3DP/e8a7Un6R7HgKuUnWS4P4LsI5t/Ix8k
+                          dmRYQM8GH9q3YEdsVvo7opl34jLnIMQjHs21ZrE2/QJBiLXAFkv4hHU9Z6ilexaL
+                          UQ2YRWlORWmviO83jQskzYXShkRGtpUTtG1S6xAZYDhN0U7djSMoXBnHLmLG5nrQ
+                          UT1Dn02/NcdplWaCtvm95vphINyO2jzs6hmw43dgKQKBgQD1kQY/mSwDA6QAW+f/
+                          wAwiYWE7XelmOI1gBDw6Pzv71vhaDd/SgFq5W1sURMmI2ZRXCa9RoGavZRQKzRW2
+                          W1QZnKdhanyftfe3PyRcrYryf3k0PtpzmZlwt0FaDhpGXB8jLhoDbrrImQeKOa5p
+                          ZEo0Bhx20/Kyaa8Ppeg/Y6prkwKBgQDI0fQFhdt1PavQW+FYggKgcseHW000IMsv
+                          JqTzXBV4cCMu0yJAzqOjQdOFcUL77IeQofdBL4atrnwPt/lYYkWM4tx1162NOqGS
+                          jTmOI5tLysUj3FJDJqNO35HCa6j2JS2ly75vQBpQLhRdyKVLgqawisVM1nQrnJbR
+                          e1jhcysucwKBgQCLZyy45edKPsLXQVVOpmM9ETL1VLauxOPc4gqetk8DBGIwHTg2
+                          c48NMoNd2j7eZUYEswbHu9sPLr5V816kCuyPLZMHhkABGnfpmvq1cf8y8pKHyjaQ
+                          8V1d02pSCTd5QcqbWgyCblWykszo9x2/zqMhLWbzPhbEmaI7q99QPO/96QKBgEll
+                          uyt9lg1OwgpAWqdvtSgRa23EZ/5CciDEngs4P7yqN6G4l09adyKHP5kJIXNUKuQo
+                          3mbbyPyXxk40bpToLgVlMTB86LiykjUvGrchunPEI7OMpiBW8d81BWAq2zFDu2Ba
+                          jDq7EiL2BImWeRuVH/lsbto7k3ARJmpgC8cywbiTAoGBAKZeIfuD6dv2stffKmBv
+                          P1nG6D+fL3aptvu/d3FVMrpPkUaPoz0HJcJ534oYn1BcvcAVldQ8PL8yIuprjmSd
+                          nn1hM7sOGBy2PId8YbT4IVwoedk7oZJhE+TbWxNSC2GIwXi1RuW5car2O6ZcmOvN
+                      sS4FVMMmaQKjOgclt2P/a4/a"
+        public-key: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxRq6ZGQlF/2tFmUAYP+hcm1kxODC8ilOQonU0vB9+kSTzCw9ZKKoOZ0ftkPA+0fA/zEcrBjxU5aAeBf88/dtXrgkm6zWJ+GjBVGmXm37NTa/9+ffH/wfhPgCv8K9Pw+vMTOENzaaD5agWgJ58I5J8tI2bquV8UMSId4FeF6q9X8DMtvB7V5xJuQs+44a3ffGMjX8TDC0hELaCZwKzxw/83zFNcbB4bSpvUx5nW3aArGfb5ZX7khQyBHzV4e9TwTt1H9SnZ8zjzRjywr3G6ocpXs8ogUFp29a2bA8c0UgoaXyfWqVVN6y9MEcI18ZagGdmt9bMfnV1ldUok73wIDAQAB"
+        validity: 30
+      refresh-token:
+        validity: 120
+    open-api:
+      enabled: true
+      api-version: 1.0.0
+      title: test
+      description: test
+
+firebase:
+  service-account:
+    path: classpath:firebase-service-account.json
+  database-url: https://your-database-name.firebaseio.com
